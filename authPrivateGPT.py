@@ -119,7 +119,8 @@ async def get_response():
 @app.route('/')
 def index():
     response = request.args.get('response')
-    return render_template('index.html', response=response)
+    auth=True
+    return render_template('index.html', response=response, auth=auth)
 
 if __name__ == "__main__":
 
