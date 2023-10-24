@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Private Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <h1 class="heading">Private Search</h1> <!-- Added a class for styling -->
+
+    <div class="container">
+        <h2 class="sub-heading">Enter a Query</h2> <!-- Added a class for styling -->
+        <form action="/get_response" method="GET">
+            <input type="text" name="token" placeholder="Enter Token" required>
+            <textarea name="sentence" placeholder="How to use AI in Robotics" rows="4"></textarea>
+            <br>
+            <input type="submit" value="Submit" onclick="showLoadingPopup()">
+        </form>
+        
+
+        {% if response %}
+            <h2>Response:</h2>
+            <p>{{ response }}</p>
+        {% endif %}
+    </div>
+
+    <div id="loading-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLoadingPopup()">&times;</span>
+            <p>Please wait, response may take up to 5 minutes...</p>
+        </div>
+    </div>
+
+</body>
+</html>
