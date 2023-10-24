@@ -98,7 +98,13 @@ Note: during the ingest process no data leaves your local environment. You could
 In order to ask a question, run a command like:
 
 ```shell
-python privateGPT.py
+python authPrivateGPT.py
+```
+
+If you don't want authentication you can use this insead
+
+```shell
+python noAuthPrivateGPT.py
 ```
 
 And wait for the script to require your input.
