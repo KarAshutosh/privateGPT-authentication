@@ -12,9 +12,9 @@
     <div class="container">
         <h2 class="sub-heading">Enter a Query</h2> <!-- Added a class for styling -->
         <form action="/get_response" method="GET">
-            <input type="text" name="token" placeholder="Enter Token" required>
             <textarea name="sentence" placeholder="How to use AI in Robotics" rows="4"></textarea>
             <br>
+            <input type="text" name="token" placeholder="Enter Token" class="token-input" required>
             <input type="submit" value="Submit" onclick="showLoadingPopup()">
         </form>
         

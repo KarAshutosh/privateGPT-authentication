@@ -95,3 +95,20 @@ input[type="submit"]:hover {
 .close:hover {
     color: #f00; /* Change color on hover */
 }
+
+/* Add styling to the token input field */
+.token-input {
+    width: 30%;
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: border-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.token-input:focus {
+    border-color: #007BFF; /* Change the border color when focused */
+}
